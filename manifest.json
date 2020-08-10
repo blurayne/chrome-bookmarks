@@ -1,19 +1,51 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "Google Chrome Bookmarks",
-  "description": "Search and launch Google Chrome bookmarks",
-  "developer_name": "Dmitry Antonenko",
+  "name": "Browser Bookmarks",
+  "description": "Search and launch browser bookmarks",
+  "developer_name": "Markus Geiger",
   "icon": "images/chrome.png",
   "options": {
     "query_debounce": 0.1
   },
   "preferences": [
     {
-      "id": "chrome_bookmarks",
+      "id": "browser_bookmarks",
       "type": "keyword",
-      "name": "Chrome bookmarks",
-      "description": "Find in chrome bookmarks",
-      "default_value": "cb"
+      "name": "Browser Bookmarks",
+      "description": "Keyword used to launch search",
+      "default_value": "bm"
+    },
+    {
+      "id": "result_type",
+      "type": "select",
+      "name": "Result Item Type",
+      "description": "Indicates if you want simple or full results",
+      "default_value": "full",
+      "options": [
+        { "value": "simple", "text": "Simple (only title line"},
+        { "value": "full", "text": "Full (title and description line)"}
+      ]
+    },
+    {
+      "id": "title_tpl",
+      "type": "input",
+      "name": "Result Item Title",
+      "description": "URL List Template",
+      "default_value": "{title}"
+    },
+    {
+      "id": "description_tpl",
+      "type": "input",
+      "name": "Result Item Description",
+      "description": "URL List Template",
+      "default_value": "{profile} | {url}"
+    },
+    
+    {
+      "id": "chrome_bin",
+      "type": "text",
+      "name": "php",
+      "default_value": "php\nccdcd\nvdvfdvd"
     }
   ]
 }
